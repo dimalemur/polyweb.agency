@@ -259,10 +259,10 @@ document.body.onload = function () {
         }
     }, 500);
 
-    if (document.documentElement.clientWidth > document.documentElement.clientHeight) {
+    if (document.documentElement.clientWidth > document.documentElement.clientHeight && document.documentElement.clientWidth < 900) {
         let port = document.getElementById('port');
         let team_c = document.querySelector('.team_c');
-        
+
         port.classList.remove('port_col');
         port.classList.add('right-orientation');
 
@@ -277,10 +277,10 @@ document.body.onload = function () {
 window.addEventListener('resize', (e) => {
     let port = document.getElementById('port');
     let team_c = document.getElementById('team_circles');
-    if (document.documentElement.clientWidth > document.documentElement.clientHeight) {
+    if (document.documentElement.clientWidth > document.documentElement.clientHeight && document.documentElement.clientWidth < 900) {
         port.classList.remove('port_col');
         port.classList.add('right-orientation');
-        
+
         team_c.classList.add('right-orientation-team-c');
         team_c.classList.remove('team_c');
     } else {
@@ -291,7 +291,7 @@ window.addEventListener('resize', (e) => {
             team_c.classList.remove('right-orientation-team-c');
             team_c.classList.add('team_c');
         } catch (error) {
-            
+
         }
     }
 })
