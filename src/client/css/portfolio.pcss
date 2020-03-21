@@ -1,0 +1,165 @@
+#portfolio {
+  background: #1c1c2a;
+  & h2 {
+    padding-left: 10%;
+  }
+}
+
+.port {
+  display: flex;
+  margin-top: 7%;
+  padding-bottom: 10%;
+  &_col {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 80%;
+  }
+  &_item {
+    padding: 5%;
+    p {
+      &:nth-child(2) {
+        color: #fafafa;
+        font-size: 20px;
+        text-align: center;
+        padding: 2% 1%;
+        font-family: "thin";
+      }
+
+      &:nth-child(4) {
+        color: #fafafa;
+        font-size: 15px;
+        text-align: center;
+        padding: 2% 1%;
+        font-family: "thin";
+      }
+    }
+  }
+}
+
+.order {
+  width: 10%;
+  position: relative;
+  font-family: thin;
+  cursor: pointer;
+
+  img {
+    &:nth-child(1) {
+      width: 20%;
+    }
+    &:nth-child(3) {
+      width: 20%;
+    }
+  }
+}
+
+.img {
+  max-width: 100%;
+  height: 25vh;
+  max-height: 300px;
+  border: 1px solid #fafafa;
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+.side {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.i1 {
+  background: url(../../source/images/p1.png) no-repeat center top / cover;
+}
+
+.i2 {
+  background: url(../../source/images/p2.png) no-repeat center top / cover;
+}
+
+.i3 {
+  background: url(../../source/images/p3.png) no-repeat center top / cover;
+}
+
+.i4 {
+  background: url(../../source/images/p4.png) no-repeat center top / cover;
+}
+
+.i5 {
+  background: url(../../source/images/p5.png) no-repeat center top / cover;
+}
+
+.t {
+  transform: translate(0%, 50%) rotate(-90deg);
+  color: #fafafa;
+  font-size: 35px;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 900px) {
+  #portfolio h2 {
+    padding-left: 0%;
+  }
+
+  .port {
+    flex-direction: column-reverse;
+  }
+
+  .order {
+    width: 100%;
+    position: relative;
+  }
+
+  .order div {
+    width: 100%;
+    height: 100%;
+  }
+
+  .t {
+    transform: rotate(0deg);
+    color: #fafafa;
+    position: relative;
+    font-size: 35px;
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .t::before {
+    content: "― ";
+  }
+
+  .t::after {
+    content: " ―";
+  }
+
+  .order:last-child {
+    display: none;
+  }
+
+  .line {
+    transform: rotate(90deg);
+    width: 5%;
+    display: none;
+  }
+
+  .port_col {
+    display: grid;
+    position: relative;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 100% 100% 100%;
+    width: 100%;
+  }
+
+  #right {
+    display: none;
+  }
+  
+  img {
+    width: 90vw;
+  }
+
+  
+}

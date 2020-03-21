@@ -1,0 +1,185 @@
+#main {
+  background: #1c1c2a;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.Main_wrap {
+  background: #1c1c2a;
+  overflow: hidden;
+}
+
+.back {
+  position: absolute;
+  opacity: 0.02;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.name_main {
+  margin-left: 10%;
+  display: inline-block;
+  box-sizing: border-box;
+  z-index: 10;
+
+  p {
+    &:first-child {
+      font-size: 48px;
+      color: #fafafa;
+      font-family: thin;
+      margin-bottom: -3%;
+      text-align: left;
+    }
+
+    &:nth-child(2) {
+      font-size: 160px;
+      color: #fafafa;
+      font-family: thin;
+      text-align: left;
+    }
+    &:last-child {
+      font-size: 72px;
+      color: #fafafa;
+      font-family: thin;
+      text-align: right;
+      margin-top: -3%;
+    }
+  }
+}
+
+.fa-chevron-down {
+  display: none;
+}
+
+.circle_1 {
+  position: absolute;
+  left: 70%;
+  top: -10vh;
+  height: 120vh;
+  overflow: hidden;
+  animation: main 55s infinite linear;
+}
+
+.circle_2 {
+  position: absolute;
+  left: 75%;
+  top: 2vh;
+  height: 100vh;
+  overflow: hidden;
+  animation: main1 60s infinite linear;
+}
+
+@media screen and (max-height: 460px) {
+  #circle {
+    display: none;
+  }
+
+}
+
+@media screen and (max-width: 425px) {
+  .name_main {
+    margin-left: 0;
+    margin-top: 15vh;
+  }
+
+  .name_main p:first-child {
+    font-size: 21px;
+  }
+
+  .name_main p:nth-child(2) {
+    font-size: 49px;
+  }
+
+  .name_main p:last-child {
+    font-size: 21px;
+  }
+}
+
+@media screen and (min-width: 426px) and (max-width: 900px) {
+  .name_main {
+    margin-left: 0;
+    margin-top: 20vh;
+  }
+
+  .name_main p:first-child {
+    font-size: 30px;
+  }
+
+  .name_main p:nth-child(2) {
+    font-size: 70px;
+  }
+
+  .name_main p:last-child {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #main {
+    display: block;
+    text-align: center;
+  }
+  .back {
+    display: none;
+  }
+
+  .down {
+    display: block;
+    color: white;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    bottom: 10%;
+    left: 0;
+    font-size: 25px;
+    animation: main2 1s infinite linear;
+    cursor: pointer;
+    height: 5%;
+    z-index: 1000;
+    margin: 0;
+  }
+
+  .fa-chevron-down {
+    display: block;
+    color: white;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    bottom: 10%;
+    left: 0;
+    font-size: 25px;
+    animation: main2 1s infinite linear;
+    cursor: pointer;
+  }
+
+  #circle {
+    overflow-x: hidden;
+    height: 100%;
+  }
+
+  .circle_1 {
+    position: absolute;
+    z-index: 100;
+    left: -50%;
+    top: -40vh;
+    width: 200%;
+    overflow-x: hidden !important;
+    animation: main 60s infinite linear;
+  }
+
+  .circle_2 {
+    position: absolute;
+    z-index: 100;
+    left: -50%;
+    top: -35vh;
+    width: 200%;
+    overflow-x: hidden !important;
+    animation: main1 60s infinite linear;
+  }
+}

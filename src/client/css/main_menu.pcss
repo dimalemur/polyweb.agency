@@ -1,0 +1,117 @@
+.main_menu {
+  position: fixed;
+  background: #181820;
+  padding: 1% 5%;
+  width: 100%;
+  max-width: inherit; /* наследуется значение родителя, а именно 30em */
+  box-sizing: border-box;
+  z-index: 1000;
+}
+.content {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.mobile {
+  display: none;
+}
+
+.fa-bars {
+  font-size: 25px;
+}
+
+.right-orientation {
+  display: grid;
+  position: relative;
+  grid-template-rows: 1fr;
+  grid-template-columns: 50% 50% 50% 50% 50% 50%;
+  width: 100%;
+}
+
+.right-orientation-team-c {
+  display: flex;
+  justify-content: space-around;
+  padding: 3% 30%;
+}
+
+.desctop {
+  display: flex;
+  list-style-type: none;
+  color: #fafafa;
+  justify-content: space-around;
+  a {
+    font-size: 20px;
+    font-family: "thin";
+    cursor: pointer;
+    border-bottom: 1px solid #181820;
+
+    &:after {
+      background-color: #fafafa;
+      display: block;
+      content: "";
+      height: 1px;
+      width: 0%;
+      transition: width 0.3s ease-in-out;
+    }
+
+    &:hover {
+      &:after {
+        width: 100%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
+      }
+    }
+
+    &:focus {
+      &:after {
+        width: 100%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .main_menu {
+    position: fixed;
+    background: #202035;
+    overflow: hidden;
+    background: #fafafa;
+  }
+
+  .mobile {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .mobile p {
+    font-family: thin;
+    font-size: 25px;
+  }
+
+  .desctop {
+    display: none;
+    z-index: 1000;
+    height: 100vh;
+    background: #fafafa;
+    li {
+      padding: 5vh 0%;
+      text-align: right;
+      a {
+        color: #202035;
+        border: 0px solid #202035;
+        font-size: 30px;
+        text-align: right;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-height: 390px) {
+  .desctop {
+    li {
+      padding: 3vh 0;
+      a {
+        font-size:25px;
+      }
+    }
+  }
+
+}
