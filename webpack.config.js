@@ -8,12 +8,14 @@ module.exports = {
     context: __dirname + '/src',
     mode: 'development',
     entry: {
+        light:'./client/js/white_theme.js',
+        dark:'./client/js/dark_theme.js',
         main: './client/js/index.js',
-        min: './client/js/wow.min.js',
     },
     output: {
         path: __dirname + '/public/build/',
-        filename: '[name].[contenthash].js'
+        filename: '[name].js'
+        // filename: '[name].[contenthash].js'
     },
     module: {
         rules: [
@@ -61,9 +63,9 @@ module.exports = {
             chunkFilename: '[id].css',
 
         }),
-        new HTMLWebpackPlugin({
-            template: __dirname + '/src/client/index.html'
-        }),
+        // new HTMLWebpackPlugin({
+        //     template: __dirname + '/src/client/index.html'
+        // }),
 
         new CopyWebpackPlugin([
             {
@@ -73,6 +75,14 @@ module.exports = {
             {
                 from: __dirname + '/src/source/images/html-images/',
                 to: __dirname + '/public/images/'
+            },
+            {
+                from: __dirname + '/src/client/js/wow.min.js',
+                to: __dirname + '/public/build/'
+            },
+            {
+                from: __dirname + '/src/client/index.html',
+                to: __dirname + '/public/build/'
             }
         ])
     ]

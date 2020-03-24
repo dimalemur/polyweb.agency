@@ -7,8 +7,11 @@
     <link rel="shortcut icon" type="image/x-icon" href="../icons/logo.png">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
         integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="dark.css">
     <title>PolyWeb.Agency</title>
-<link href="main.css" rel="stylesheet"></head>
+
+</head>
 
 <body>
     <div id="wrap">
@@ -29,6 +32,12 @@
                     <li><a href="#portfolio">Портфолио</a></li>
                     <li><a href="#services">Услуги</a></li>
                     <li><a href="#contacts">Контакты</a></li>
+                    <li class="white-menu">
+                        <span class="switch-text">
+                            светлая тема
+                        </span>
+                        <input id="switch" class="swither" type="checkbox">
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -44,17 +53,16 @@
                     <i class="fas fa-chevron-down"></i>
                 </a>
 
-                <div id="circle">
-                    <img class="circle_1" src="../images/big.svg">
-                    <img class="circle_2" src="../images/big.svg">
-                </div>
-
             </section>
+            <div id="circle">
+                <img class="circle_1" src="../images/big.svg">
+                <img class="circle_2" src="../images/big.svg">
+            </div>
         </div>
 
         <section id="about">
-            <div class="content">
-                <div class="wow fadeIn">
+            <div class="content wow fadeIn">
+                <div >
                     <h2>КТО <span class="red">МЫ?</span></h2>
                     <div class="about_us">
                         <p><span class="red">PolyWeb Agency</span> - активно развивающаяся веб-студия, открытая
@@ -75,8 +83,8 @@
         </section>
 
         <section id="team">
-            <div class="content">
-                <div class="wow fadeIn">
+            <div class="content wow fadeIn">
+                <div >
                     <h2>НАША <span class="red">КОМАНДА</span></h2>
                     <div class="team_col" id="team_col">
                         <div class="item">
@@ -128,7 +136,7 @@
                             <p>Руководитель</p>
                         </div>
                     </div>
-                    <div class="team_c" id = "team_circles" >
+                    <div class="team_c" id="team_circles">
                         <div class="team_circle active_c" id="t1"></div>
                         <div class="team_circle" id="t2"></div>
                     </div>
@@ -137,8 +145,8 @@
         </section>
 
         <section id="portfolio">
-            <div class="content">
-                <div class="wow fadeIn">
+            <div class="content wow fadeIn">
+                <div >
                     <h2>НАШИ <span class="red">РАБОТЫ</span></h2>
                     <div class="port">
                         <a href="#fos" class="order">
@@ -189,12 +197,14 @@
                             </div>
                         </div>
 
-                        <div class="order" onclick="right()" id="right">
-                            <div class="side">
-                                <img src="../images/Group 6.svg" class="line">
-                                <p class="t">ЕЩЕ РАБОТЫ</p>
-                                <img src="../images/Group 6.svg" class="line">
-                            </div>
+                        <div class="order" id="right">
+                            <a href="#port">
+                                <div class="side">
+                                    <img src="../images/Group 6.svg" class="line">
+                                    <p class="t">ЕЩЕ РАБОТЫ</p>
+                                    <img src="../images/Group 6.svg" class="line">
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -202,8 +212,8 @@
         </section>
 
         <section id="services">
-            <div class="content">
-                <div class="wow fadeIn">
+            <div class="content wow fadeIn">
+                <div>
                     <h2>НАШИ <span class="red">УСЛУГИ</span></h2>
                     <div class="services_items">
                         <div class="services_menu">
@@ -251,8 +261,8 @@
         </section>
 
         <section id="contacts">
-            <div class="content">
-                <div class="wow fadeIn">
+            <div class="content wow fadeIn">
+                <div>
                     <h2>НАШИ <span class="red">КОНТАКТЫ</span></h2>
                     <div class="cont">
                         <div class="left">
@@ -303,6 +313,10 @@
 
 
     </div>
-<script type="text/javascript" src="main.0e70aa1115aa0f77df22.js"></script><script type="text/javascript" src="min.140fcc1b4da9e698bcd6.js"></script></body>
+    <script src="wow.min.js"></script>
+    <script src="main.js"></script>
+    <script id="theme_js" src="dark.js"></script>
+    <script id="theme_js" src="light.js"></script>
+</body>
 
 </html>

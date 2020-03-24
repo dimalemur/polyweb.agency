@@ -1,0 +1,360 @@
+#about,
+#services,
+#contacts {
+  background:var(--white-bg-color);
+}
+
+.about_us {
+  background:var(--black-bg-color);
+  border: 0px solid var(--white-bg-color);
+}
+
+.left {
+  p {
+    &:nth-child(1) {
+      color: #b0b0b0;
+    }
+    &:nth-child(3) {
+      color:var(--black-bg-color);
+    }
+    &:nth-child(4) {
+      color: #b0b0b0;
+    }
+    &:nth-child(6) {
+      color:var(--black-bg-color);
+    }
+  }
+}
+
+
+.loader {
+    border-bottom: 10px solid var(--black-bg-color);
+    border-right: 10px solid var(--black-bg-color);
+    border-left: 10px solid var(--black-bg-color);
+  }
+
+.checkbox {
+  color:var(--black-bg-color);
+  color:var(--black-bg-color);
+  &:checked + .fake-checkbox {
+    color: var(--black-bg-color);
+  }
+}
+
+.fake-checkbox {
+  border: 2px solid var(--black-bg-color);
+}
+
+.checkbox {
+  color:var(--black-bg-color);
+  color:var(--black-bg-color);
+  &:checked + .fake-checkbox {
+    color: var(--black-bg-color);
+  }
+}
+
+.fake-checkbox {
+  border: 2px solid var(--black-bg-color);
+}
+
+@media screen and (max-width: 900px) {
+  .left p:nth-child(1) {
+    color: #b0b0b0;
+  }
+
+  .left p:nth-child(3) {
+    color:var(--black-bg-color);
+  }
+
+  .left p:nth-child(4) {
+    color: #b0b0b0;
+  }
+
+  .left p:nth-child(6) {
+    color:var(--black-bg-color);
+  }
+
+  button {
+    background:var(--black-bg-color);
+    color: var(--white-bg-color);
+    border: 3px solid var(--black-bg-color);
+  }
+
+  .checkbox {
+    color:var(--black-bg-color);
+    color:var(--black-bg-color);
+  }
+
+  .fake-checkbox {
+    border: 2px solid var(--black-bg-color);
+  }
+  ​ .checkbox:checked + .fake-checkbox {
+    background:var(--black-bg-color);
+    color: var(--black-bg-color);
+  }
+}
+
+.desctop {
+  color:var(--black-bg-color);
+  a {
+    border-bottom: 1px solid var(--white-bg-color);
+
+    &:after {
+      background-color:var(--black-bg-color);
+    }
+  }
+}
+
+.white-menu {
+  color: var(--white-bg-color);
+}
+
+.switch-text {
+  color: var(--black-bg-color);
+}
+
+.main_menu {
+    background:var(--white-bg-color);
+    border-bottom: 3px solid var(--black-bg-color);
+}
+
+#m1 {
+  background-image: url(../../source/images/site_dark.svg);
+}
+
+#m2 {
+  background-image: url(../../source/images/content_light.svg);
+}
+
+#m3 {
+  background-image: url(../../source/images/design_light.svg);
+}
+
+@media screen and (max-width: 900px) {
+    .switch-text {
+        color: var(--white-bg-color);
+    }
+    .main_menu {
+    background:var(--black-bg-color);
+    border: none;
+    .mobile{
+        color: var(--white-bg-color);
+    }
+    
+  }
+
+  .icon {
+      a {
+          color: var(--white-bg-color);
+      }
+  }
+
+  .desctop {
+    background:var(--black-bg-color);
+    li {
+      a {
+        color: var(--white-bg-color);
+        border: 0px solid var(--white-bg-color);
+      }
+    }
+  }
+}
+#main {
+  background:var(--white-bg-color);
+}
+
+.Main_wrap {
+  background: var(--white-bg-color);
+}
+
+.name_main {
+  p {
+    &:first-child {
+      color:var(--black-bg-color);
+    }
+
+    &:nth-child(2) {
+      color:var(--black-bg-color);
+    }
+    &:last-child {
+      color:var(--black-bg-color);
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .down {
+    color: var(--black-bg-color);
+  }
+
+  .fa-chevron-down {
+    color: var(--black-bg-color);
+  }
+}
+
+#portfolio {
+  background: var(--white-bg-color);
+}
+
+.port {
+  &_item {
+    p {
+      &:nth-child(2) {
+        color:var(--black-bg-color);
+      }
+
+      &:nth-child(4) {
+        color:var(--black-bg-color);
+      }
+    }
+  }
+}
+
+.img {
+  border: 1px solid var(--black-bg-color);
+}
+
+@media screen and (max-width: 900px) {
+  #portfolio h2 {
+    padding-left: 0%;
+  }
+
+  .port {
+    flex-direction: column-reverse;
+  }
+
+  .order {
+    width: 100%;
+    position: relative;
+  }
+
+  .order div {
+    width: 100%;
+    height: 100%;
+  }
+
+  .t {
+    color:var(--black-bg-color);
+  }
+}
+
+.preloader {
+  background: var(--white-bg-color);
+}
+
+.services {
+  &_item {
+    color:var(--black-bg-color);
+  }
+
+  &_menu {
+    &_item {
+      background-color:var(--black-bg-color) !important;
+      border: 2px solid var(--white-bg-color);
+    }
+  }
+}
+
+.active {
+  background-color:var(--white-bg-color) !important;
+  border: 2px solid var(--black-bg-color);
+}
+
+@media screen and (max-width: 900px) {
+  .services_menu_item {
+    border: 2px solid var(--black-bg-color) !important;
+  }
+}
+
+#team {
+  background: var(--white-bg-color);
+}
+.item {
+  color: var(--black-bg-color);
+  border-left: 1px solid var(--white-bg-color);
+  &:hover {
+    border-left: 1px solid var(--black-bg-color);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .item p:first-child {
+    border-left: 0px solid var(--black-bg-color);
+  }
+
+  .item p:last-child {
+    border-left: 0px solid var(--black-bg-color);
+  }
+
+  .item:hover {
+    border-left: 0px solid var(--black-bg-color);
+  }
+
+  .team_circle {
+    border: 2px solid var(--black-bg-color);
+  }
+
+  .active_c {
+    background:var(--black-bg-color);
+  }
+}
+
+a {
+  color:var(--black-bg-color);
+}
+
+h2 {
+  color:var(--black-bg-color);
+}
+h3 {
+  color:var(--black-bg-color);
+}
+button {
+  width: 80%;
+  background:var(--black-bg-color);
+  color: var(--white-bg-color);
+  border: 3px solid var(--black-bg-color);
+  &:hover {
+    color:var(--black-bg-color);
+    border: 3px solid var(--black-bg-color);
+  }
+}
+
+input,
+textarea {
+  border: 0px solid var(--white-bg-color);
+  border-bottom: 1px solid #cf0000;
+  color:var(--black-bg-color);
+}
+
+label {
+  color:var(--black-bg-color);
+}
+
+.message {
+  color:var(--black-bg-color);
+}
+
+@media screen and (max-width: 900px) {
+  input,
+  textarea {
+    border: 0px solid var(--white-bg-color);
+    color:var(--black-bg-color);
+  }
+
+  label {
+    color:var(--black-bg-color);
+  }
+}
+
+
+.about_us p {
+    color: var(--white-bg-color);
+}
+
+::selection {
+  color:var(--black-bg-color);
+}
+::-moz-selection {
+  color:var(--black-bg-color);
+}

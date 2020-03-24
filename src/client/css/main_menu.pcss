@@ -1,12 +1,64 @@
+.swither {
+  width: 50px;
+  height: 25px;
+  margin: 0px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: #c6c6c6;
+  outline: none;
+  border-radius: 50px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+  position: relative;
+  &:checked {
+    background: #02a9f4;
+    &::before {
+      left: 25px;
+    }
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    background: #fff;
+    transform: scale(1.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: 0.5s;
+  }
+}
+
 .main_menu {
   position: fixed;
-  background: #181820;
+  background: var(--menu-black-color);
   padding: 1% 5%;
   width: 100%;
   max-width: inherit; /* наследуется значение родителя, а именно 30em */
   box-sizing: border-box;
   z-index: 1000;
 }
+
+.white-menu {
+  /* color: var(--white-bg-color); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.switch-text {
+  font-size: 20px;
+  padding-right: 30px;
+  font-family:"thin";
+}
+
+#circle {
+  position: relative;
+  top: -100vh;
+}
+
 .content {
   max-width: 1440px;
   margin: 0 auto;
@@ -36,16 +88,16 @@
 .desctop {
   display: flex;
   list-style-type: none;
-  color: #fafafa;
+   /* color: #fafafa; */
   justify-content: space-around;
   a {
     font-size: 20px;
     font-family: "thin";
     cursor: pointer;
-    border-bottom: 1px solid #181820;
+     /* border-bottom: 1px solid #181820; */
 
     &:after {
-      background-color: #fafafa;
+       /* background-color: #fafafa; */
       display: block;
       content: "";
       height: 1px;
@@ -70,9 +122,10 @@
 @media screen and (max-width: 900px) {
   .main_menu {
     position: fixed;
-    background: #202035;
+    /* background: #202035; */
     overflow: hidden;
-    background: #fafafa;
+    z-index: 9999;
+    /* background: #fafafa; */
   }
 
   .mobile {
@@ -89,29 +142,32 @@
     display: none;
     z-index: 1000;
     height: 100vh;
-    background: #fafafa;
+    /* background: #fafafa; */
     li {
       padding: 5vh 0%;
       text-align: right;
       a {
         color: #202035;
-        border: 0px solid #202035;
+        /* border: 0px solid #202035; */
         font-size: 30px;
         text-align: right;
       }
     }
   }
-}
 
+  #circle {
+    overflow-x: visible;
+    height: 100%;
+  }
+}
 
 @media screen and (max-height: 390px) {
   .desctop {
     li {
       padding: 3vh 0;
       a {
-        font-size:25px;
+        font-size: 25px;
       }
     }
   }
-
 }
